@@ -18,3 +18,5 @@ temp/*.json
 
 # OS
 .DS_Store
+# Session-private
+.claude/

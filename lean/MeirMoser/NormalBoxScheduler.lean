@@ -154,8 +154,10 @@ theorem normal_widths_telescope_bound
   --     ((boxes.map Prod.fst).map f), via List.map_map.
   have hmap_eq : (boxes.map (fun p : ℕ × ℝ => f p.1)).sum
                 = (Sl.map f).sum := by
-    congr 1
-    rw [hSl_def, List.map_map]
+    have : Sl.map f = boxes.map (f ∘ Prod.fst) := by
+      rw [hSl_def, List.map_map]
+    rw [this]
+    rfl
   -- (5) Convert the list-sum of `Sl.map f` into finset-sum on `S = Sl.toFinset`,
   -- using `List.prod_toFinset`'s additive twin.
   have hSl_nodup : Sl.Nodup := hSl_def ▸ h_distinct
