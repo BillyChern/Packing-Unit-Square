@@ -100,6 +100,20 @@ class MaxRectsPacker:
             return (long_, short)
         if heuristic == "BL":
             return (fr.y + h, fr.x)
+        if heuristic == "CONTACT":
+            # Contact-edge MaxRects: prefer placements whose edges align with
+            # FR boundaries, breaking ties via bottom-left (low y, then low x).
+            # Bonuses (in units of edge-length):
+            #   + h  if w == fr.w  (right side touches FR right boundary)
+            #   + w  if h == fr.h  (top side touches FR top boundary)
+            extra = F(0)
+            if w == fr.w:
+                extra += h
+            if h == fr.h:
+                extra += w
+            contact = w + h + extra
+            # Lower score is better → negate contact so larger contact wins.
+            return (-contact, fr.y + h)
         raise ValueError(f"unknown heuristic {heuristic}")
 
     def _find_position(
