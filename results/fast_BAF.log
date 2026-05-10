@@ -1,0 +1,13 @@
+  [BAF] k=200/5000  free=179  total=0.3s  Δ=0.3s
+  [BAF] k=400/5000  free=364  total=1.8s  Δ=1.5s
+  [BAF] k=600/5000  free=551  total=4.8s  Δ=3.0s
+  [BAF] k=800/5000  free=751  total=10.4s  Δ=5.6s
+  [BAF] k=1000/5000  free=934  total=19.9s  Δ=9.5s
+  [BAF] k=1200/5000  free=1122  total=34.5s  Δ=14.6s
+  [BAF] k=1400/5000  free=1317  total=54.6s  Δ=20.1s
+  [BAF] k=1600/5000  free=1514  total=80.8s  Δ=26.2s
+  [BAF] k=1800/5000  free=1705  total=117.4s  Δ=36.6s
+  [BAF] k=2000/5000  free=1897  total=165.7s  Δ=48.3s
+  [BAF] k=2200/5000  free=2090  total=220.5s  Δ=54.9s
+  [BAF] k=2400/5000  free=2279  total=286.4s  Δ=65.8s
+  [BAF] k=2600/5000  free=2467  total=364.2s  Δ=77.8s

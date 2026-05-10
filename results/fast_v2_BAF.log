@@ -1,0 +1,18 @@
+  [BAF] k=200/3000  free=179  total=0.3s  Δ=0.3s
+  [BAF] k=400/3000  free=364  total=1.8s  Δ=1.5s
+  [BAF] k=600/3000  free=551  total=4.9s  Δ=3.1s
+  [BAF] k=800/3000  free=751  total=10.7s  Δ=5.9s
+  [BAF] k=1000/3000  free=934  total=22.4s  Δ=11.6s
+  [BAF] k=1200/3000  free=1122  total=36.2s  Δ=13.8s
+  [BAF] k=1400/3000  free=1317  total=57.9s  Δ=21.7s
+  [BAF] k=1600/3000  free=1514  total=84.7s  Δ=26.8s
+  [BAF] k=1800/3000  free=1705  total=120.7s  Δ=36.1s
+  [BAF] k=2000/3000  free=1897  total=163.3s  Δ=42.5s
+  [BAF] k=2200/3000  free=2090  total=214.1s  Δ=50.8s
+  [BAF] k=2400/3000  free=2279  total=274.3s  Δ=60.2s
+  [BAF] k=2600/3000  free=2467  total=349.0s  Δ=74.7s
+  [BAF] k=2800/3000  free=2665  total=439.1s  Δ=90.2s
+  [BAF] k=3000/3000  free=2859  total=543.7s  Δ=104.5s
+
+[BAF] FINAL max_N = 3000, sigma <= 3002/3001 = 1.0003332223
+saved to /workspace/Packing/results/fast_push_BAF.json

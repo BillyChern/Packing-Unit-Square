@@ -1,0 +1,13 @@
+  [BSSF] k=200/5000  free=174  total=0.3s  Δ=0.3s
+  [BSSF] k=400/5000  free=371  total=2.0s  Δ=1.7s
+  [BSSF] k=600/5000  free=552  total=5.1s  Δ=3.1s
+  [BSSF] k=800/5000  free=735  total=10.4s  Δ=5.3s
+  [BSSF] k=1000/5000  free=919  total=20.4s  Δ=9.9s
+  [BSSF] k=1200/5000  free=1094  total=33.7s  Δ=13.3s
+  [BSSF] k=1400/5000  free=1275  total=52.2s  Δ=18.5s
+  [BSSF] k=1600/5000  free=1468  total=76.4s  Δ=24.3s
+  [BSSF] k=1800/5000  free=1652  total=109.0s  Δ=32.6s
+  [BSSF] k=2000/5000  free=1840  total=151.4s  Δ=42.4s
+  [BSSF] k=2200/5000  free=2030  total=205.3s  Δ=53.9s
+  [BSSF] k=2400/5000  free=2221  total=268.6s  Δ=63.3s
+  [BSSF] k=2600/5000  free=2405  total=349.3s  Δ=80.8s

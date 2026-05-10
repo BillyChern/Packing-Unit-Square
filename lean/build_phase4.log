@@ -1,0 +1,160 @@
+✖ [3/2535] Running Mathlib.Data.Rat.Basic
+error: no such file or directory (error code: 2)
+  file: ././.lake/packages/mathlib/././Mathlib/Data/Rat/Basic.lean
+✖ [2523/2535] Running MeirMoser.Basic
+error: ././././MeirMoser/Basic.lean: bad import 'Mathlib.Data.Rat.Basic'
+✖ [2524/2535] Running MeirMoser.Geometry
+error: ././././MeirMoser/Geometry.lean: bad import 'Mathlib.Data.Rat.Basic'
+error: ././././MeirMoser/Geometry.lean: bad import 'MeirMoser.Basic'
+✖ [2525/2535] Running Mathlib.Algebra.BigOperators.Basic
+error: no such file or directory (error code: 2)
+  file: ././.lake/packages/mathlib/././Mathlib/Algebra/BigOperators/Basic.lean
+✖ [2526/2535] Running MeirMoser.TailSums
+error: ././././MeirMoser/TailSums.lean: bad import 'Mathlib.Algebra.BigOperators.Basic'
+error: ././././MeirMoser/TailSums.lean: bad import 'Mathlib.Data.Rat.Basic'
+error: ././././MeirMoser/TailSums.lean: bad import 'MeirMoser.Basic'
+✖ [2527/2535] Running MeirMoser.FinitePacking
+error: ././././MeirMoser/FinitePacking.lean: bad import 'MeirMoser.Geometry'
+error: ././././MeirMoser/FinitePacking.lean: bad import 'MeirMoser.Basic'
+✖ [2528/2535] Running MeirMoser.Cellification
+error: ././././MeirMoser/Cellification.lean: bad import 'Mathlib.Data.Rat.Basic'
+error: ././././MeirMoser/Cellification.lean: bad import 'MeirMoser.Basic'
+✖ [2529/2535] Running MeirMoser.EndpointPotential
+error: ././././MeirMoser/EndpointPotential.lean: bad import 'Mathlib.Algebra.BigOperators.Basic'
+error: ././././MeirMoser/EndpointPotential.lean: bad import 'Mathlib.Data.Rat.Basic'
+error: ././././MeirMoser/EndpointPotential.lean: bad import 'MeirMoser.Geometry'
+✖ [2530/2535] Running MeirMoser.Certificate
+error: ././././MeirMoser/Certificate.lean: bad import 'MeirMoser.Geometry'
+error: ././././MeirMoser/Certificate.lean: bad import 'MeirMoser.FinitePacking'
+✖ [2531/2535] Running MeirMoser
+error: ././././MeirMoser.lean: bad import 'MeirMoser.Basic'
+error: ././././MeirMoser.lean: bad import 'MeirMoser.Geometry'
+error: ././././MeirMoser.lean: bad import 'MeirMoser.TailSums'
+error: ././././MeirMoser.lean: bad import 'MeirMoser.FinitePacking'
+error: ././././MeirMoser.lean: bad import 'MeirMoser.Cellification'
+error: ././././MeirMoser.lean: bad import 'MeirMoser.EndpointPotential'
+error: ././././MeirMoser.lean: bad import 'MeirMoser.Certificate'
+✖ [2532/2535] Running Mathlib.Algebra.Order.Ring.Lemmas
+error: no such file or directory (error code: 2)
+  file: ././.lake/packages/mathlib/././Mathlib/Algebra/Order/Ring/Lemmas.lean
+✖ [2533/2535] Running MeirMoser.Experimental.LegacyMoser
+error: ././././MeirMoser/Experimental/LegacyMoser.lean: bad import 'Mathlib.Algebra.Order.Ring.Lemmas'
+✖ [2534/2535] Building MeirMoser.LRP
+trace: .> LEAN_PATH=././.lake/packages/Cli/.lake/build/lib:././.lake/packages/batteries/.lake/build/lib:././.lake/packages/Qq/.lake/build/lib:././.lake/packages/aesop/.lake/build/lib:././.lake/packages/proofwidgets/.lake/build/lib:././.lake/packages/importGraph/.lake/build/lib:././.lake/packages/LeanSearchClient/.lake/build/lib:././.lake/packages/plausible/.lake/build/lib:././.lake/packages/mathlib/.lake/build/lib:././.lake/build/lib LD_LIBRARY_PATH=/usr/local/cuda/lib64 /workspace/.elan/toolchains/leanprover--lean4---v4.15.0/bin/lean -Dpp.unicode.fun=true -DautoImplicit=false ././././MeirMoser/LRP.lean -R ./././. -o ././.lake/build/lib/MeirMoser/LRP.olean -i ././.lake/build/lib/MeirMoser/LRP.ilean -c ././.lake/build/ir/MeirMoser/LRP.c --json
+warning: ././././MeirMoser/LRP.lean:28:8: `div_le_iff` has been deprecated: use `div_le_iff₀` instead
+error: ././././MeirMoser/LRP.lean:30:36: unsolved goals
+X Y c t R : ℝ
+hY : 0 < Y
+hYX : Y ≤ X
+hR : 1 ≤ R
+hAspect : X ≤ R * Y
+hArea : c / t ≤ X * Y
+hc : 0 < c
+ht : 0 < t
+hRt : 0 < R * t
+hX_le : X * Y ≤ R * Y * Y
+h1 : c / t ≤ R * Y * Y
+h2 : c / t / R ≤ Y * Y
+⊢ t * R = R * t ∨ c = 0
+warning: ././././MeirMoser/LRP.lean:66:10: `div_lt_iff` has been deprecated: use `div_lt_iff₀` instead
+warning: ././././MeirMoser/LRP.lean:79:13: `div_le_iff` has been deprecated: use `div_le_iff₀` instead
+warning: ././././MeirMoser/LRP.lean:88:8: `div_le_iff` has been deprecated: use `div_le_iff₀` instead
+warning: ././././MeirMoser/LRP.lean:97:8: `le_div_iff` has been deprecated: use `le_div_iff₀` instead
+warning: ././././MeirMoser/LRP.lean:111:14: `le_div_iff` has been deprecated: use `le_div_iff₀` instead
+error: ././././MeirMoser/LRP.lean:111:12: tactic 'rewrite' failed, did not find instance of the pattern in the target expression
+  ?m.84625 * t ≤ ?m.84626
+X Y c t R α s : ℝ
+hY : 0 < Y
+hYX : Y ≤ X
+hArea : c / t ≤ X * Y
+hc : 0 < c
+ht : 0 < t
+hR : 1 < R
+hAspect : X ≤ R * Y
+hα : 0 < α
+hs : 0 ≤ s
+hsBound : s ≤ α / t
+hT : α ^ 2 * R / (c * (1 - 1 / R) ^ 2) ≤ t
+h_one_minus : 0 < 1 - 1 / R
+hRpos : 0 < R
+hY2 : c / (R * t) ≤ Y * Y
+hT' : α ^ 2 * R ≤ c * (1 - 1 / R) ^ 2 * t
+hRt_pos : 0 < R * t
+hRt_ne : R * t ≠ 0
+hα2_t2_le : α ^ 2 / t ^ 2 ≤ (1 - 1 / R) ^ 2 * (c / (R * t))
+h_target : α ^ 2 / t ^ 2 ≤ (1 - 1 / R) ^ 2 * (Y * Y)
+ht2 : 0 < t ^ 2
+⊢ s * t ≤ α
+error: ././././MeirMoser/LRP.lean:114:6: linarith failed to find a contradiction
+case a
+X Y c t R α s : ℝ
+hY : 0 < Y
+hYX : Y ≤ X
+hArea : c / t ≤ X * Y
+hc : 0 < c
+ht : 0 < t
+hR : 1 < R
+hAspect : X ≤ R * Y
+hα : 0 < α
+hs : 0 ≤ s
+hsBound : s ≤ α / t
+hT : α ^ 2 * R / (c * (1 - 1 / R) ^ 2) ≤ t
+h_one_minus : 0 < 1 - 1 / R
+hRpos : 0 < R
+hY2 : c / (R * t) ≤ Y * Y
+hT' : α ^ 2 * R ≤ c * (1 - 1 / R) ^ 2 * t
+hRt_pos : 0 < R * t
+hRt_ne : R * t ≠ 0
+hα2_t2_le : α ^ 2 / t ^ 2 ≤ (1 - 1 / R) ^ 2 * (c / (R * t))
+h_target : α ^ 2 / t ^ 2 ≤ (1 - 1 / R) ^ 2 * (Y * Y)
+ht2 : 0 < t ^ 2
+this : s * t ≤ α
+a✝ : s ^ 2 > α ^ 2 / t ^ 2
+⊢ False failed
+error: ././././MeirMoser/LRP.lean:142:65: linarith failed to find a contradiction
+case a
+X Y c t R α s : ℝ
+hY : 0 < Y
+hYX : Y ≤ X
+hArea : c / t ≤ X * Y
+hc : 0 < c
+ht : 0 < t
+hR : 1 < R
+hAspect : X ≤ R * Y
+hα : 0 < α
+hs : 0 ≤ s
+hsBound : s ≤ α / t
+hT : α ^ 2 * R / (c * (1 - 1 / R) ^ 2) ≤ t
+h_one_minus : 0 < 1 - 1 / R
+hRpos : 0 < R
+hY2 : c / (R * t) ≤ Y * Y
+hT' : α ^ 2 * R ≤ c * (1 - 1 / R) ^ 2 * t
+hRt_pos : 0 < R * t
+hRt_ne : R * t ≠ 0
+hα2_t2_le : α ^ 2 / t ^ 2 ≤ (1 - 1 / R) ^ 2 * (c / (R * t))
+h_target : α ^ 2 / t ^ 2 ≤ (1 - 1 / R) ^ 2 * (Y * Y)
+hs2 : s ^ 2 ≤ (1 - 1 / R) ^ 2 * Y ^ 2
+hsY : s ≤ (1 - 1 / R) * Y
+hsX : s ≤ (1 - 1 / R) * X
+hX_pos : 0 < X
+hs_lt_X : s < X
+this : Y / R ≤ X / R
+a✝ : X / R > X - s + (X - X / R - s + 0)
+⊢ False failed
+warning: ././././MeirMoser/LRP.lean:148:6: `div_le_iff` has been deprecated: use `div_le_iff₀` instead
+error: Lean exited with code 1
+Some required builds logged failures:
+- Mathlib.Data.Rat.Basic
+- MeirMoser.Basic
+- MeirMoser.Geometry
+- Mathlib.Algebra.BigOperators.Basic
+- MeirMoser.TailSums
+- MeirMoser.FinitePacking
+- MeirMoser.Cellification
+- MeirMoser.EndpointPotential
+- MeirMoser.Certificate
+- MeirMoser
+- Mathlib.Algebra.Order.Ring.Lemmas
+- MeirMoser.Experimental.LegacyMoser
+- MeirMoser.LRP
+error: build failed

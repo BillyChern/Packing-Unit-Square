@@ -1,0 +1,23 @@
+  ! k=     2 mss=5.0000e-01 ratio=1.500 (NEW MIN)
+  ! k=     3 mss=3.3333e-01 ratio=1.333 (NEW MIN)
+  k=  1000 mss=1.9282e-03 ratio=1.930  min=1.333@k=3  t=2s
+  k=  2000 mss=1.0216e-03 ratio=2.044  min=1.333@k=3  t=7s
+  k=  3000 mss=6.8926e-04 ratio=2.068  min=1.333@k=3  t=19s
+  k=  4000 mss=3.6386e-04 ratio=1.456  min=1.333@k=3  t=35s
+  k=  5000 mss=3.5416e-04 ratio=1.771  min=1.333@k=3  t=49s
+  k=  6000 mss=3.4504e-04 ratio=2.071  min=1.333@k=3  t=64s
+  k=  7000 mss=3.1924e-04 ratio=2.235  min=1.333@k=3  t=83s
+  k=  8000 mss=2.2538e-04 ratio=1.803  min=1.333@k=3  t=110s
+  k=  9000 mss=2.0040e-04 ratio=1.804  min=1.333@k=3  t=147s
+  k= 10000 mss=1.7856e-04 ratio=1.786  min=1.333@k=3  t=205s
+  k= 11000 mss=1.7756e-04 ratio=1.953  min=1.333@k=3  t=243s
+  k= 12000 mss=1.6522e-04 ratio=1.983  min=1.333@k=3  t=292s
+  k= 13000 mss=1.5863e-04 ratio=2.062  min=1.333@k=3  t=347s
+  k= 14000 mss=1.3794e-04 ratio=1.931  min=1.333@k=3  t=438s
+  k= 15000 mss=1.2772e-04 ratio=1.916  min=1.333@k=3  t=529s
+  k= 16000 mss=1.1410e-04 ratio=1.826  min=1.333@k=3  t=654s
+  k= 17000 mss=1.0983e-04 ratio=1.867  min=1.333@k=3  t=766s
+  k= 18000 mss=1.0571e-04 ratio=1.903  min=1.333@k=3  t=872s
+  k= 19000 mss=1.0185e-04 ratio=1.935  min=1.333@k=3  t=995s
+  k= 20000 mss=1.0062e-04 ratio=2.013  min=1.333@k=3  t=1098s
+  k= 21000 mss=8.7533e-05 ratio=1.838  min=1.333@k=3  t=1271s

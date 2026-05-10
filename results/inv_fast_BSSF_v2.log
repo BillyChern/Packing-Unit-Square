@@ -1,0 +1,47 @@
+  ! k=      2 mss=5.0000e-01 ratio=1.500 feas=2.000 (NEW MIN)
+  k=   1000 mss=9.2901e-03 ratio=9.299 feas=9.309  min=1.500@k=2  t=2s
+  k=   2000 mss=9.2901e-03 ratio=18.590 feas=18.599  min=1.500@k=2  t=7s
+  k=   3000 mss=9.2901e-03 ratio=27.880 feas=27.889  min=1.500@k=2  t=12s
+  k=   4000 mss=6.9814e-03 ratio=27.932 feas=27.939  min=1.500@k=2  t=21s
+  k=   5000 mss=6.9814e-03 ratio=34.914 feas=34.921  min=1.500@k=2  t=30s
+  k=   6000 mss=5.7876e-03 ratio=34.732 feas=34.737  min=1.500@k=2  t=49s
+  k=   7000 mss=4.8719e-03 ratio=34.108 feas=34.113  min=1.500@k=2  t=132s
+  k=   8000 mss=4.7881e-03 ratio=38.309 feas=38.314  min=1.500@k=2  t=168s
+  k=   9000 mss=4.1979e-03 ratio=37.785 feas=37.790  min=1.500@k=2  t=216s
+  k=  10000 mss=4.1945e-03 ratio=41.949 feas=41.954  min=1.500@k=2  t=265s
+  k=  11000 mss=4.1848e-03 ratio=46.037 feas=46.042  min=1.500@k=2  t=360s
+  k=  12000 mss=3.7600e-03 ratio=45.123 feas=45.127  min=1.500@k=2  t=464s
+  k=  13000 mss=3.6900e-03 ratio=47.973 feas=47.977  min=1.500@k=2  t=549s
+  k=  14000 mss=3.5273e-03 ratio=49.386 feas=49.390  min=1.500@k=2  t=670s
+  k=  15000 mss=3.5273e-03 ratio=52.914 feas=52.917  min=1.500@k=2  t=776s
+  k=  16000 mss=3.5273e-03 ratio=56.441 feas=56.445  min=1.500@k=2  t=929s
+  k=  17000 mss=3.5273e-03 ratio=59.968 feas=59.972  min=1.500@k=2  t=1056s
+  k=  18000 mss=3.5273e-03 ratio=63.496 feas=63.499  min=1.500@k=2  t=1147s
+  k=  19000 mss=3.5273e-03 ratio=67.023 feas=67.027  min=1.500@k=2  t=1203s
+  k=  20000 mss=3.2362e-03 ratio=64.727 feas=64.730  min=1.500@k=2  t=1383s
+  k=  21000 mss=3.0304e-03 ratio=63.642 feas=63.645  min=1.500@k=2  t=1648s
+  k=  22000 mss=2.9309e-03 ratio=64.482 feas=64.485  min=1.500@k=2  t=1926s
+  k=  23000 mss=2.7530e-03 ratio=63.321 feas=63.324  min=1.500@k=2  t=2218s
+  k=  24000 mss=2.7530e-03 ratio=66.074 feas=66.077  min=1.500@k=2  t=2359s
+  k=  25000 mss=2.6036e-03 ratio=65.093 feas=65.096  min=1.500@k=2  t=2589s
+  k=  26000 mss=2.4550e-03 ratio=63.832 feas=63.835  min=1.500@k=2  t=2839s
+  k=  27000 mss=2.3883e-03 ratio=64.488 feas=64.490  min=1.500@k=2  t=3038s
+  k=  28000 mss=2.3263e-03 ratio=65.139 feas=65.142  min=1.500@k=2  t=3209s
+  k=  29000 mss=2.3017e-03 ratio=66.752 feas=66.755  min=1.500@k=2  t=3337s
+  k=  30000 mss=2.2696e-03 ratio=68.090 feas=68.092  min=1.500@k=2  t=3414s
+  k=  31000 mss=2.2248e-03 ratio=68.973 feas=68.975  min=1.500@k=2  t=3648s
+  k=  32000 mss=2.0942e-03 ratio=67.015 feas=67.017  min=1.500@k=2  t=3915s
+  k=  33000 mss=2.0942e-03 ratio=69.109 feas=69.111  min=1.500@k=2  t=4036s
+  k=  34000 mss=2.0679e-03 ratio=70.309 feas=70.311  min=1.500@k=2  t=4310s
+  k=  35000 mss=2.0679e-03 ratio=72.377 feas=72.379  min=1.500@k=2  t=4759s
+  k=  36000 mss=2.0679e-03 ratio=74.445 feas=74.447  min=1.500@k=2  t=5085s
+  k=  37000 mss=2.0679e-03 ratio=76.513 feas=76.515  min=1.500@k=2  t=5303s
+  k=  38000 mss=2.0679e-03 ratio=78.581 feas=78.583  min=1.500@k=2  t=5697s
+  k=  39000 mss=2.0679e-03 ratio=80.649 feas=80.651  min=1.500@k=2  t=5980s
+  k=  40000 mss=2.0679e-03 ratio=82.716 feas=82.718  min=1.500@k=2  t=6283s
+Traceback (most recent call last):
+  File "/workspace/Packing/temp/track_inv_fast.py", line 60, in <module>
+    main(h, N)
+  File "/workspace/Packing/temp/track_inv_fast.py", line 46, in main
+    with open(f"/workspace/Packing/results/inv_fast_{heuristic}_chk.json", "w") as f:
+OSError: [Errno 28] No space left on device

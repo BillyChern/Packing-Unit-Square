@@ -1,0 +1,37 @@
+  ! k=      2 mss=5.0000e-01 ratio=1.500 feas=1.500 (NEW MIN)
+  ! k=      3 mss=2.5000e-01 ratio=1.000 feas=1.250 (NEW MIN)
+  ! k=     10 mss=8.3333e-02 ratio=0.917 feas=1.000 (NEW MIN)
+  k=   1000 mss=4.2137e-03 ratio=4.218 feas=4.222  min=0.917@k=10  t=2s
+  k=   2000 mss=2.7778e-03 ratio=5.558 feas=5.561  min=0.917@k=10  t=6s
+  k=   3000 mss=8.7371e-04 ratio=2.622 feas=2.623  min=0.917@k=10  t=15s
+  k=   4000 mss=8.7371e-04 ratio=3.496 feas=3.497  min=0.917@k=10  t=23s
+  k=   5000 mss=8.7371e-04 ratio=4.369 feas=4.370  min=0.917@k=10  t=34s
+  k=   6000 mss=8.7371e-04 ratio=5.243 feas=5.244  min=0.917@k=10  t=61s
+  k=   7000 mss=8.7371e-04 ratio=6.117 feas=6.118  min=0.917@k=10  t=92s
+  k=   8000 mss=7.8718e-04 ratio=6.298 feas=6.299  min=0.917@k=10  t=123s
+  k=   9000 mss=7.8718e-04 ratio=7.085 feas=7.086  min=0.917@k=10  t=182s
+  k=  10000 mss=7.1089e-04 ratio=7.110 feas=7.110  min=0.917@k=10  t=216s
+  k=  11000 mss=7.1089e-04 ratio=7.821 feas=7.821  min=0.917@k=10  t=275s
+  k=  12000 mss=7.1089e-04 ratio=8.531 feas=8.532  min=0.917@k=10  t=302s
+  k=  13000 mss=5.4677e-04 ratio=7.109 feas=7.109  min=0.917@k=10  t=420s
+  k=  14000 mss=5.4677e-04 ratio=7.655 feas=7.656  min=0.917@k=10  t=486s
+  k=  15000 mss=5.4677e-04 ratio=8.202 feas=8.203  min=0.917@k=10  t=556s
+  k=  16000 mss=5.4677e-04 ratio=8.749 feas=8.749  min=0.917@k=10  t=629s
+  k=  17000 mss=3.9428e-04 ratio=6.703 feas=6.704  min=0.917@k=10  t=703s
+  k=  18000 mss=3.9428e-04 ratio=7.097 feas=7.098  min=0.917@k=10  t=754s
+  k=  19000 mss=3.9428e-04 ratio=7.492 feas=7.492  min=0.917@k=10  t=832s
+  k=  20000 mss=3.9428e-04 ratio=7.886 feas=7.886  min=0.917@k=10  t=901s
+  k=  21000 mss=3.9428e-04 ratio=8.280 feas=8.281  min=0.917@k=10  t=959s
+  k=  22000 mss=3.9428e-04 ratio=8.675 feas=8.675  min=0.917@k=10  t=1023s
+  k=  23000 mss=3.9428e-04 ratio=9.069 feas=9.069  min=0.917@k=10  t=1088s
+  k=  24000 mss=3.9428e-04 ratio=9.463 feas=9.464  min=0.917@k=10  t=1164s
+  k=  25000 mss=3.9428e-04 ratio=9.857 feas=9.858  min=0.917@k=10  t=1230s
+  k=  26000 mss=3.2857e-04 ratio=8.543 feas=8.543  min=0.917@k=10  t=1890s
+  k=  27000 mss=3.2857e-04 ratio=8.872 feas=8.872  min=0.917@k=10  t=2019s
+  k=  28000 mss=3.2857e-04 ratio=9.200 feas=9.201  min=0.917@k=10  t=2134s
+  k=  29000 mss=3.2857e-04 ratio=9.529 feas=9.529  min=0.917@k=10  t=2267s
+  k=  30000 mss=3.2857e-04 ratio=9.857 feas=9.858  min=0.917@k=10  t=2685s
+  k=  31000 mss=3.2857e-04 ratio=10.186 feas=10.186  min=0.917@k=10  t=2848s
+  k=  32000 mss=3.2857e-04 ratio=10.515 feas=10.515  min=0.917@k=10  t=3016s
+  k=  33000 mss=3.2857e-04 ratio=10.843 feas=10.843  min=0.917@k=10  t=3232s
+  k=  34000 mss=3.2857e-04 ratio=11.172 feas=11.172  min=0.917@k=10  t=3419s

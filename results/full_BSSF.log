@@ -1,0 +1,18 @@
+=== Full run: heuristic=BSSF N_max=2000 ===
+  k=200/2000 free=174 t=0.3s
+  k=400/2000 free=371 t=2.0s
+  k=600/2000 free=552 t=4.8s
+  k=800/2000 free=735 t=12.4s
+  k=1000/2000 free=919 t=21.2s
+  k=1200/2000 free=1094 t=34.2s
+  k=1400/2000 free=1275 t=54.8s
+  k=1600/2000 free=1468 t=79.6s
+  k=1800/2000 free=1652 t=113.9s
+  k=2000/2000 free=1840 t=155.1s
+
+  --> Successfully placed first 2000 into [0,1]²
+  σ-bound (finite N): 2002/2001 = 1.0004997501
+  ★ BEATS Bálint's 501/500 = 1.0020000000
+  Prefix verify_ok=True time=0.0s
+
+L-strip extension with n=2001, J=15, max_k=4000

@@ -1,0 +1,28 @@
+{
+  "heuristic": "CONTACT",
+  "max_N_in_unit_square": 20000,
+  "n_for_lstrip": 20001,
+  "sigma": "20002/20001",
+  "sigma_float": 1.000049997500125,
+  "B\u00e1lint_501_500": 1.002,
+  "improvement": 0.001950002499875092,
+  "verified_finite_prefix_to_k": 81000,
+  "construction_proves_for_all_k": true,
+  "verify_full_ok": true,
+  "lstrip_inequalities": {
+    "row1_long_sum_float": 0.693159680091211,
+    "I1 (row1_long \u2264 1)": true,
+    "max_top_arm_row_horizontal_float": 0.6931534302865195,
+    "max_argmax_j": 2,
+    "I2 (max_top_row \u2264 1+1/n)": true,
+    "top_arm_total_height_float": 4.374699239671381e-05,
+    "1_over_n": 4.999750012499375e-05,
+    "I3 (top_arm_height \u2264 1/n)": true,
+    "I4 (n \u2265 2)": true,
+    "all_ok": true,
+    "sigma": "20002/20001",
+    "J_checked": 4,
+    "note": "Inequalities I1-I3 also hold for all J by analytic bounds: I1,I2 by harmonic-diff < 1; I3 by geometric series."
+  },
+  "k_count_materialized": 81000
+}

@@ -1,0 +1,18 @@
+  [BLSF] k=200/3000  free=192  total=0.4s  Δ=0.4s
+  [BLSF] k=400/3000  free=390  total=1.6s  Δ=1.3s
+  [BLSF] k=600/3000  free=587  total=4.8s  Δ=3.2s
+  [BLSF] k=800/3000  free=784  total=11.2s  Δ=6.4s
+  [BLSF] k=1000/3000  free=977  total=20.3s  Δ=9.1s
+  [BLSF] k=1200/3000  free=1175  total=33.4s  Δ=13.1s
+  [BLSF] k=1400/3000  free=1373  total=53.0s  Δ=19.6s
+  [BLSF] k=1600/3000  free=1573  total=78.5s  Δ=25.5s
+  [BLSF] k=1800/3000  free=1773  total=112.3s  Δ=33.7s
+  [BLSF] k=2000/3000  free=1969  total=152.9s  Δ=40.6s
+  [BLSF] k=2200/3000  free=2168  total=202.3s  Δ=49.5s
+  [BLSF] k=2400/3000  free=2368  total=262.1s  Δ=59.8s
+  [BLSF] k=2600/3000  free=2566  total=335.8s  Δ=73.6s
+  [BLSF] k=2800/3000  free=2766  total=422.7s  Δ=86.9s
+  [BLSF] k=3000/3000  free=2966  total=530.8s  Δ=108.1s
+
+[BLSF] FINAL max_N = 3000, sigma <= 3002/3001 = 1.0003332223
+saved to /workspace/Packing/results/fast_push_BLSF.json

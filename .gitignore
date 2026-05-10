@@ -1,0 +1,20 @@
+# Lean build artifacts
+lean/.lake/
+lean/build/
+**/.olean
+**/.ilean
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Logs and large temp files
+temp/*.log
+temp/*.json
+
+# Results (keep schema, not data)
+# results/  # let's keep results actually for the cert files
+
+# OS
+.DS_Store

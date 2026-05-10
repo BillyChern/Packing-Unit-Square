@@ -1,0 +1,50 @@
+============================================
+LOOP CHECK at 2026-05-02T16:50:37Z
+============================================
+--- Inode/disk ---
+/dev/mapper/vg_data-lv_data 52277432 11155313 41122119   22% /workspace
+/dev/mapper/vg_data-lv_data  5.9T  4.2T  1.8T  71% /workspace
+--- Active processes ---
+9
+ python procs
+--- Latest tracker values ---
+  [BSSF]   k=  22000 mss=2.9309e-03 ratio=64.482 feas=64.485  min=1.500@k=2  t=1954s
+  [BAF]   k=  32000 mss=7.5758e-04 ratio=24.243 feas=24.244  min=1.500@k=2  t=1969s
+  [CONTACT]   k=  26000 mss=7.1609e-05 ratio=1.862 feas=1.862  min=1.333@k=3  t=1939s
+  [BLSF]   k=  26000 mss=3.2857e-04 ratio=8.543 feas=8.543  min=0.917@k=10  t=1890s
+  [BSSF 1M]
+  k=  21000 mss=3.0304e-03 ratio=63.642 feas=63.645  min=1.500@k=2  t=1741s
+--- Cert pushes ---
+  [v6_BAF_100k]   k=27200/100000 free=26018 t=1271.8s
+  [v6_BAF_50k]   k=27400/50000 free=26213 t=1255.9s
+  [v6_BSSF_50k]   k=19200/50000 free=18132 t=1243.5s
+--- New certificates? ---
+/workspace/Packing/results/full_BAF_N10000.json
+/workspace/Packing/results/full_BLSF_N10000.json
+/workspace/Packing/results/full_BSSF_N10000.json
+/workspace/Packing/results/full_CONTACT_N10000.json
+============================================
+LOOP CHECK at 2026-05-02T17:53:13Z
+============================================
+--- Inode/disk ---
+/dev/mapper/vg_data-lv_data 11705208 11130809 574399   96% /workspace
+/dev/mapper/vg_data-lv_data  5.9T  4.2T  1.7T  72% /workspace
+--- Active processes ---
+5
+ python procs
+--- Latest tracker values ---
+  [BSSF]   k=  31000 mss=2.2248e-03 ratio=68.973 feas=68.975  min=1.500@k=2  t=3854s
+  [BAF]   k=  40000 mss=7.5758e-04 ratio=30.304 feas=30.305  min=1.500@k=2  t=3587s
+  [CONTACT]   k=  36000 mss=5.0261e-05 ratio=1.809 feas=1.809  min=1.333@k=3  t=3815s
+  [BLSF]   k=  34000 mss=3.2857e-04 ratio=11.172 feas=11.172  min=0.917@k=10  t=3419s
+  [BSSF 1M]
+  k=  28000 mss=2.3263e-03 ratio=65.139 feas=65.142  min=1.500@k=2  t=3486s
+--- Cert pushes ---
+  [v6_BAF_100k]   k=38200/100000 free=36588 t=3036.5s
+  [v6_BAF_50k]   k=38200/50000 free=36588 t=3030.0s
+  [v6_BSSF_50k]   k=26800/50000 free=25367 t=3061.9s
+--- New certificates? ---
+/workspace/Packing/results/full_BAF_N10000.json
+/workspace/Packing/results/full_BLSF_N10000.json
+/workspace/Packing/results/full_BSSF_N10000.json
+/workspace/Packing/results/full_CONTACT_N10000.json

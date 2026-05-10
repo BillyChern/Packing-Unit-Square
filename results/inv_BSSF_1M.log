@@ -1,0 +1,8 @@
+  ! k=     2 mss=5.0000e-01 ratio=1.500 feas=2.000 (NEW MIN)
+  k=  1000 mss=9.2901e-03 ratio=9.299 feas=9.309  min=1.500@k=2  t=3s
+  k=  2000 mss=9.2901e-03 ratio=18.590 feas=18.599  min=1.500@k=2  t=11s
+  k=  3000 mss=9.2901e-03 ratio=27.880 feas=27.889  min=1.500@k=2  t=29s
+  k=  4000 mss=6.9814e-03 ratio=27.932 feas=27.939  min=1.500@k=2  t=55s
+  k=  5000 mss=6.9814e-03 ratio=34.914 feas=34.921  min=1.500@k=2  t=85s
+  k=  6000 mss=5.7876e-03 ratio=34.732 feas=34.737  min=1.500@k=2  t=132s
+  k=  7000 mss=4.8719e-03 ratio=34.108 feas=34.113  min=1.500@k=2  t=258s

@@ -1,0 +1,26 @@
+Placed: 500
+Rotation: {'rotated': 348, 'native': 152, 'ratio_rotated': 0.696}
+Zone analysis (8x8):
+  zone (1, 6): n=1 k_min=2 k_max=2 median=2
+  zone (3, 5): n=1 k_min=3 k_max=3 median=3
+  zone (3, 7): n=2 k_min=6 k_max=41 median=41
+  zone (4, 2): n=1 k_min=1 k_max=1 median=1
+  zone (4, 6): n=2 k_min=119 k_max=120 median=120
+  zone (4, 7): n=14 k_min=7 k_max=420 median=188
+  zone (5, 4): n=1 k_min=4 k_max=4 median=4
+  zone (5, 6): n=7 k_min=8 k_max=194 median=149
+  zone (5, 7): n=8 k_min=9 k_max=276 median=34
+  zone (6, 5): n=2 k_min=16 k_max=17 median=17
+  zone (6, 6): n=10 k_min=14 k_max=300 median=102
+  zone (6, 7): n=39 k_min=13 k_max=485 median=124
+  zone (7, 4): n=1 k_min=5 k_max=5 median=5
+  zone (7, 5): n=10 k_min=18 k_max=374 median=143
+  zone (7, 6): n=28 k_min=19 k_max=491 median=167
+  zone (7, 7): n=373 k_min=35 k_max=500 median=298
+
+Distinct y-coordinates of placement bottoms: 306
+  first 20: [0.0, 0.5, 0.7, 0.7455, 0.7481, 0.7526, 0.7588, 0.7625, 0.7903, 0.8, 0.8026, 0.8043, 0.8067, 0.8103, 0.8133, 0.8162, 0.8199, 0.8221, 0.8222, 0.825]
+  last 5: [0.9976, 0.9976, 0.9976, 0.9979, 0.998]
+
+Bounding extent: (1.000000, 1.000000)
+Saved figures/N500_BSSF.svg

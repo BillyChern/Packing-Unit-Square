@@ -1,0 +1,18 @@
+=== Full run: heuristic=BAF N_max=2000 ===
+  k=200/2000 free=179 t=0.3s
+  k=400/2000 free=364 t=2.1s
+  k=600/2000 free=551 t=6.4s
+  k=800/2000 free=751 t=12.6s
+  k=1000/2000 free=934 t=21.8s
+  k=1200/2000 free=1122 t=36.3s
+  k=1400/2000 free=1317 t=56.3s
+  k=1600/2000 free=1514 t=83.2s
+  k=1800/2000 free=1705 t=118.6s
+  k=2000/2000 free=1897 t=161.5s
+
+  --> Successfully placed first 2000 into [0,1]²
+  σ-bound (finite N): 2002/2001 = 1.0004997501
+  ★ BEATS Bálint's 501/500 = 1.0020000000
+  Prefix verify_ok=True time=0.0s
+
+L-strip extension with n=2001, J=15, max_k=4000
