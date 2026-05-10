@@ -58,38 +58,36 @@
     (3) If no normal box fits, fall back to `calibratedBalancedStep`, which
         cuts a stripe off the LRP.
 
-  What is intentionally left as `sorry`
-  -------------------------------------
-  The `some i` branch — actually building the new `TailState` after placing
-  `D_t` inside the chosen normal box — is left as `sorry`. The implementation
-  is mechanical but non-trivial because:
+  Implementation status
+  ---------------------
+  The `some i` branch is now implemented (no `sorry`). Concretely:
 
-    • One must build a `PlacedRect` for `D_n` whose corner is the chosen
-      normal box's `(x0, y0)`, NOT the LRP's `(x0, y0)`.
-    • One must produce a NEW `NormalBoxRecord` for the leftover region
-      (typically the strip above `D_n` inside the box, plus possibly the
-      strip to the right of `D_n` if the box is wider than `1/(t+1)`),
-      and assign each leftover record an appropriate `birthIdx`. The
-      birth index for the leftover is a DESIGN DECISION:
-        - Option A: keep the original `birthIdx = k` (the leftover is a
-          "child" of the same box and inherits its calibration).
-        - Option B: use `birthIdx = n` (the leftover was "born" at step
-          `n` from the cut).
-      The FULL Meir–Moser proof requires Option A so that the calibrated
-      width law `c1 ≤ w · k^γ ≤ c2` continues to hold for the leftover
-      with the same `k`.
-    • One must thread `Rect` proof obligations (`hx`, `hy`) through, which
-      requires knowing the box's geometry meets the placement constraints
-      (this follows from the `findNormalBoxForRotated` predicate).
-    • One must reconstruct a valid `FinitePacking` extension. The new
-      `D_n` is interior-disjoint from existing placements because the
-      normal box was disjoint from prior placed rectangles by the
-      packing invariant on `S`.
+    • A new `PlacedRect` for `D_n` is appended at the chosen normal
+      box's `(x0, y0)` corner with `rotated := true` (so width = 1/(t+1),
+      height = 1/t).
+    • The chosen box is REMOVED from `S.normalBoxes` (`List.eraseIdx i`)
+      and replaced by TWO new `NormalBoxRecord`s:
+        - "above" leftover: `[x0, x0 + 1/(n+1)] × [y0 + 1/n, y1]`
+        - "right" leftover: `[x0 + 1/(n+1), x1] × [y0, y1]`
+      The "right" strip is degenerate (zero width) when the chosen box's
+      width is exactly `1/(n+1)`; we keep it for uniformity.
+    • Both leftovers INHERIT the original box's `birthIdx` (Option A
+      from the design notes), preserving the calibrated width law
+      `c1 ≤ w · k^γ ≤ c2`.
+    • `Rect` proof obligations (`hx`, `hy`) are discharged from the
+      `findNormalBoxForRotated` predicate, recovered at the use site
+      via an explicit `if h_fits : ...` recheck.
 
-  All of this is straightforward case work but requires roughly the same
-  amount of Lean as `calibratedBalancedStep`. That implementation is a
-  follow-up task; the skeleton here is enough to plumb `nbfStep` into
-  the rest of the calibrated framework and to state preservation lemmas.
+  Open follow-up obligations (NOT in this file):
+
+    • Showing that the new `placed` list is still a valid
+      `FinitePacking`. This requires interior-disjointness of `D_n` with
+      every prior placement, which follows from the (yet-to-be-tracked)
+      invariant that `S.normalBoxes` regions are interior-disjoint
+      from `S.placed`. That invariant must be added to the calibrated
+      framework before a preservation lemma for `nbfStep` can be proved.
+    • A preservation lemma analogous to `calibratedBalancedStep_*`
+      that propagates `GoodTailState` across `nbfStep`.
 
   Relationship to the existing code
   ---------------------------------
@@ -125,29 +123,74 @@ def findNormalBoxForRotated (S : TailState) (t : ℕ) : Option ℕ :=
       • Otherwise, fall back to the LRP-cut step
         `calibratedBalancedStep γ_num γ_den S`.
 
-    The `some i` branch is currently a `sorry` placeholder; see the
-    top-of-file documentation for the math obligations and the design
-    decision (birth-index inheritance) that the full implementation
-    must respect. -/
+    Design choice (Option A from the file header): the leftover strips
+    INHERIT the original box's `birthIdx`, preserving the calibrated
+    width law `c1 ≤ w · k^γ ≤ c2`.
+
+    Implementation note: the predicate from `findNormalBoxForRotated`
+    guarantees the chosen box has the required dimensions. We RECHECK
+    the predicate at the use site to recover proof-relevant data for
+    the `Rect.hx`/`hy` obligations on the leftover strips. The
+    "doesn't fit" / "out of bounds" branches return `S` unchanged;
+    by construction these are never reached on a well-formed lookup. -/
 def nbfStep (γ_num γ_den : ℕ) (S : TailState) : TailState :=
   let n := S.t
+  let w_d : ℚ := 1 / ((n + 1 : ℕ) : ℕ)        -- rotated D_n width  = 1/(n+1)
+  let h_d : ℚ := 1 / ((n : ℕ) : ℕ)            -- rotated D_n height = 1/n
   match findNormalBoxForRotated S n with
-  | some _i =>
-      -- TODO (follow-up task): build the new TailState here.
-      --   1. Pop normal box at index `_i` from `S.normalBoxes`.
-      --   2. Append `PlacedRect { n := n, x0 := box.rect.x0,
-      --                            y0 := box.rect.y0, rotated := true }`
-      --      to `S.placed`.
-      --   3. Append leftover strip(s) inside the popped box as new
-      --      `NormalBoxRecord`s. The leftover above `D_n` is the rect
-      --      `[box.x0, box.x0 + 1/(n+1)] × [box.y0 + 1/n, box.y1]`
-      --      (or `[box.x0, box.x1] × [box.y0 + 1/n, box.y1]` plus a
-      --      side strip, depending on the cut convention chosen).
-      --   4. The leftover's `birthIdx` should be the ORIGINAL box's
-      --      `birthIdx` so the calibrated width law
-      --      `c1 ≤ w · k^γ ≤ c2` carries over.
-      --   5. Advance `t` by 1; container, LRP, endpointBoxes unchanged.
-      sorry
+  | some i =>
+      match h_get : S.normalBoxes.get? i with
+      | some chosen =>
+          if h_fits : w_d ≤ chosen.rect.x1 - chosen.rect.x0 ∧
+                      h_d ≤ chosen.rect.y1 - chosen.rect.y0 then
+            -- Place rotated D_n at the box's bottom-left corner, and
+            -- replace the box with two leftover normal boxes:
+            --   • "above": [x0, x0 + 1/(n+1)] × [y0 + 1/n, y1]
+            --   • "right": [x0 + 1/(n+1), x1] × [y0, y1]
+            -- Both inherit the original `birthIdx` (Option A).
+            { t := n + 1
+              container := S.container
+              placed := S.placed ++ [
+                { n := n, x0 := chosen.rect.x0, y0 := chosen.rect.y0, rotated := true }]
+              LRP := S.LRP
+              normalBoxes :=
+                (S.normalBoxes.eraseIdx i) ++ [
+                  -- Leftover above D_n.
+                  { rect :=
+                      { x0 := chosen.rect.x0
+                        y0 := chosen.rect.y0 + h_d
+                        x1 := chosen.rect.x0 + w_d
+                        y1 := chosen.rect.y1
+                        hx := by
+                          have h_w_nn : (0 : ℚ) ≤ w_d := by positivity
+                          linarith
+                        hy := by
+                          have h := h_fits.2
+                          linarith }
+                    birthIdx := chosen.birthIdx },
+                  -- Leftover to the right of D_n (possibly degenerate
+                  -- if the box's width equals 1/(n+1) exactly).
+                  { rect :=
+                      { x0 := chosen.rect.x0 + w_d
+                        y0 := chosen.rect.y0
+                        x1 := chosen.rect.x1
+                        y1 := chosen.rect.y1
+                        hx := by
+                          have h := h_fits.1
+                          linarith
+                        hy := chosen.rect.hy }
+                    birthIdx := chosen.birthIdx }]
+              endpointBoxes := S.endpointBoxes }
+          else
+            -- Unreachable on well-formed input: the find predicate
+            -- guaranteed `h_fits`. Keep `S` unchanged as a safe
+            -- fallback so the function remains total.
+            S
+      | none =>
+          -- Unreachable on well-formed input: `findIdx?` returned a
+          -- valid index, so `get? i` cannot be `none`. Keep `S`
+          -- unchanged as a safe fallback.
+          S
   | none =>
       -- No normal box has room: fall back to the LRP-cut step.
       calibratedBalancedStep γ_num γ_den S
