@@ -122,21 +122,40 @@ LRP's longer side stays Θ(1) since each cut shaves only `1/(t+1)` and
 cumulative bound is Θ(k), not summable. The c-share `c − Θ(k)` flips
 sign at k ≈ c / maxSide_avg.
 
-**Route A.5 partial execution (2026-05-10)**: implemented the calibrated
-stripe `a_t = 1/(t+1) + 1/t²` (rational lower bound on `1/(t+1) + t^{-γ}`
-for γ ≤ 2). Created 7 new Lean files (~1300 LoC, sorry-free): `CalibratedStripe`,
-`CalibratedStripeArea/Aspect/Aux/Containment/Combine/RpowBound`. All four
-per-step preservations proved, `step_preserves_GoodTailState_calibrated`
-proved.
+**Sharpened residual gap (2026-05-10, paper-side audit Tracks C-1/C-2/C-3)**:
 
-**However**, simulation (`temp/sim_calibrated.py`) revealed that even the
-calibrated stripe with the proven (loose) per-step bound
-`a_t · maxSide · (t+1)` diverges: c-share flips negative at k=1 for the N=100
-cert. The TIGHTER bound `a_t · maxSide · (1 + 1/t)` would close cumulatively
-but isn't unconditionally provable per-step (counterexample at boundary
-saturation). The full Meir-Moser framework requires additional bookkeeping
-(cellification, endpoint potential, normal-box width law) that our simplified
-setting lacks. See `docs/16-route-a5-status.md` for full analysis.
+The paper-side audit identified that the calibrated framework's two suspect
+claims (N4: normal-box no-waste invariant; N5: P_ep amortization) are
+**JOINTLY CONSTRAINED** — they cannot be discharged independently. Specifically:
+
+- **N4** holds under strict normal-box-first scheduling with oldest-first
+  tie-breaking, but this scheduler doesn't fire absorbers fast enough → N5
+  fails (P_ep diverges).
+- **N5** holds under endpoint-prioritized scheduling, but endpoints absorb
+  every D_t while old wide normal boxes survive indefinitely → N4 fails.
+- **The fix**: a **rate-limited interleaving scheduler** that fires one
+  absorber per O(t^{1/γ}) normal placements. Under this scheduler AND with
+  N7's balanced cuts, the cumulative bound `C_1 · Σ √(R/(c·t)) ≤ Δ · Σ 1/t + η`
+  closes (LHS becomes O(T^{−1/γ}) → 0 as T → ∞).
+
+This rate-limited interleaving scheduler is **ABSENT** from the research
+notes §9.3. The framework's residual gap is now precisely localized: not
+two independent gaps, not a wholesale axiom, but **one missing scheduler
+design** (~1-2 weeks of careful research-level work, then 4-8 weeks of
+Lean formalization).
+
+**Lean state** (Route A and A.5 partial executions):
+- 9 calibrated-stripe files + 8 balanced-step files + 7 supporting files,
+  all sorry-free, ~6200 LoC total.
+- `NormalBoxFirstStep.lean` (198 LoC, sorry-free): full normal-box-first
+  scheduler skeleton ready for the rate-limited interleaving extension.
+- `NormalBoxScheduler.lean` (188 LoC, sorry-free): cumulative normal-box
+  width bound (`normal_widths_telescope_bound`).
+- 1 remaining project axiom (`balanced_c_share_positive_axiom`) captures
+  the joint N4∧N5 deep-math claim.
+
+See `docs/19-paper-N4.md`, `docs/20-paper-N5.md`, `docs/16-route-a5-status.md`
+for the full analysis chain.
 
 **Net status**: the framework is structurally complete and mechanically
 verified down to a single named axiom. That axiom captures the precise
